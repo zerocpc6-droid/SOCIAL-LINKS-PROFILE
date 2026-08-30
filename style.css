@@ -13,61 +13,48 @@
 
 /* Page background and centered card */
 body {
-  margin: 0;
-  padding: 0;
   background-color: var(--background);
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   color: var(--text-color);
 }
 
 .card {
-  justify-content: center;
-  align-items: center;
-  width: 30%;
   background-color: var(--card-color);
+  border-radius: var(--btn-border-radius);
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  font-size: 14px;
+  width: 30%;
 }
 
 .link_img {
-  width: 100%;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.link_img img {
+.profile__img {
+  width: 6rem;
+  height: 6rem;
   border-radius: var(--image-border-radius);
-  padding: 3rem;
+}
+
+.Img_desc {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile__links {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
-}
-
-.profile__links button {
-  padding: 1rem 1.5rem;
-  background-color: var(--link-color);
-  border: none;
-  width: 100%;
-  border-radius: var(--btn-border-radius);
-  margin-bottom: 1rem;
-}
-
-.profile__links button a {
-  text-decoration: none;
-  color: var(--text-color);
-  text-transform: uppercase;
 }
