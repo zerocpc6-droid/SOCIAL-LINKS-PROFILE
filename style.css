@@ -3,12 +3,17 @@
   --background: hsl(0, 0%, 8%);
   --card-color: hsl(0, 0%, 12%);
   --link-color: hsl(0, 0%, 20%);
-
   --text-color: white;
+  --link-hover: hsl(75, 94%, 57%);
 
   /* Border-sizing */
   --btn-border-radius: 10px;
   --image-border-radius: 50%;
+}
+
+* ::before,
+::after {
+  box-sizing: border-box;
 }
 
 /* Page background and centered card */
@@ -19,6 +24,9 @@ body {
   justify-content: center;
   display: flex;
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
 }
 
 .card {
@@ -28,7 +36,9 @@ body {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  width: 30%;
+  width: 25%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .link_img {
@@ -39,9 +49,10 @@ body {
 }
 
 .profile__img {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: var(--image-border-radius);
+  box-sizing: border-box;
 }
 
 .Img_desc {
@@ -51,10 +62,46 @@ body {
   flex-direction: column;
 }
 
+.userName {
+  font-size: 18px;
+  font-weight: 700;
+  margin-block-start: 10px;
+  margin-block-end: 5px;
+}
+
+.userLocation {
+  color: var(--link-hover);
+}
+
 .profile__links {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
+}
+
+.profile__links button {
+  border-radius: var(--btn-border-radius);
+  margin-block-end: 12px;
+  padding: 1rem 1.3rem;
+  background-color: var(--link-color);
+  border: none;
+}
+
+.profile__links :hover {
+  background-color: var(--link-hover);
+  color: black;
+  cursor: pointer;
+}
+
+.profile__links button a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 75%;
+  }
 }
