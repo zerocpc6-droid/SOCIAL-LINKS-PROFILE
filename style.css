@@ -42,7 +42,7 @@ body {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  width: 23%;
+  width: 70%;
   padding: 1.5rem 2rem;
 }
 
@@ -111,14 +111,14 @@ body {
 .profile__links :focus {
   background-color: var(--link-hover);
   color: black;
-  cursor: pointer black;
+  cursor: pointer;
 }
 .instagram_link {
   padding: 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 23.44rem) {
   .card {
-    width: 70%;
+    width: 23%;
   }
 }
