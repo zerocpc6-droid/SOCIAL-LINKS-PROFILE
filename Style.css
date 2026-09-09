@@ -117,7 +117,7 @@ body {
   padding: 0;
 }
 
-@media (min-width: 137rem) {
+@media (min-width: 64rem) {
   .card {
     width: 23%;
   }
